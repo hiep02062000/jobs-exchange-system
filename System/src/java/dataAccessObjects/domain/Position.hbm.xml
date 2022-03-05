@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class catalog="jobssystem" name="dataAccessObjects.domain.Position" optimistic-lock="version" table="position">
+    <id name="idPosition" type="java.lang.Integer">
+      <column name="idPosition"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="dataAccessObjects.domain.Company" fetch="join" name="company">
+      <column name="Company_idCompany" not-null="true"/>
+    </many-to-one>
+    <property name="name" type="string">
+      <column length="45" name="name"/>
+    </property>
+    <property name="publishDate" type="date">
+      <column length="10" name="publishDate"/>
+    </property>
+    <property name="salary" type="java.lang.Double">
+      <column name="salary" precision="22" scale="0"/>
+    </property>
+    <property name="publicPos" type="java.lang.Byte">
+      <column name="publicPos"/>
+    </property>
+    <property name="enable" type="byte">
+      <column name="enable" not-null="true"/>
+    </property>
+    <set fetch="join" inverse="true" lazy="false" name="positionfeatures" table="positionfeature">
+      <key>
+        <column name="Position_idPosition" not-null="true"/>
+      </key>
+      <one-to-many class="dataAccessObjects.domain.PositionFeature"/>
+    </set>
+  </class>
+</hibernate-mapping>

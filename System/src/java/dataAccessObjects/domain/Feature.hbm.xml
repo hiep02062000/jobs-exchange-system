@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="dataAccessObjects.domain.Feature" table="feature" catalog="jobssystem" optimistic-lock="version">
+        <id name="idFeature" type="java.lang.Integer">
+            <column name="idFeature" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="parentFeature" class="dataAccessObjects.domain.Feature" fetch="select">
+            <column name="Feature_idFeature" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <set name="features" table="feature" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Feature_idFeature" />
+            </key>
+            <one-to-many class="dataAccessObjects.domain.Feature" />
+        </set>
+    </class>
+</hibernate-mapping>

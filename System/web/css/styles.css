@@ -1,0 +1,226 @@
+/*GENERAL BODY*/
+body{
+    background-color: rgb(252, 252, 252);
+}
+/*-----------------------------------------*/
+
+
+/*INDEX*/
+.main{
+    font-family: 'Mina', sans-serif;
+    background-color:  lightseagreen;  
+    color: black;
+}
+
+#general-search{
+    margin-left: 250px;
+}
+
+#general-search-bt{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+h1 a{
+    color: black;
+}
+
+.rcorners {
+    border-radius: 20px;
+}
+
+/*--------------------------------------------*/
+
+
+/* FOOTER */
+#footer{ 
+    background-color: rgb(36, 199, 191);
+}
+
+#copyright{
+    background-color: rgb(29, 158, 152);
+}
+/* ------------------------------------------ */
+
+/*OTHER INDEX AND HEADER ELEMENTS*/
+#sign-up{
+    margin-left: 5%
+}
+
+.search{
+    padding-left: 150px;
+    font-size: 120%;
+    padding-right: 130px;
+    
+}
+
+.carousel{
+    margin-left: 10px;
+}
+
+.carousel-inner{
+    border-radius: 20px;
+}
+
+.carousel-title:hover{
+    cursor: pointer;
+}
+
+#adv{
+    font-family: 'Mina', sans-serif;
+}
+
+#login{
+    margin-left: 290px;
+}
+
+#login-bt{
+    margin-left: 30px;
+}
+
+#type {
+    margin-left: 30px;
+}
+/*------------------------------------------------------*/
+
+
+/* SEARCH */
+.path-item:hover{
+    color: rgb(236, 14, 14);
+    text-decoration: line-through;
+}
+/* ------------------------------------------------------- */
+
+
+/* PAYPAL */
+.credit-card-box .panel-heading{
+    background-color: gainsboro;
+}
+
+.credit-card-box .panel-title {
+    display: inline;
+    font-weight: bold;
+}
+
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+}
+
+.credit-card-box label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+
+.credit-card-box .payment-errors {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+
+.credit-card-box label {
+    display: block;
+}
+
+.credit-card-box .display-table {
+    display: table;
+}
+
+.credit-card-box .display-tr {
+    display: table-row;
+}
+
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.credit-card-box .subscribe{
+    background-color: rgb(255, 117, 26);
+    border-color: rgb(255, 117, 26);
+}
+
+.credit-card-box .panel-heading img {
+    min-width: 180px;
+}
+
+svg{
+  display:block;
+  position:absolute;
+  top:50%;
+  margin-left: 185px;
+  transform:translate(-70%, -60%)
+}
+h6 {
+    display: block;
+    font-size: 1em;
+    margin-top: 0.67em;
+    margin-bottom: 0.66em;
+    margin-left: 42px;
+    margin-right: 0;
+    font-weight: bold;
+}
+/* ------------------------------------------ */
+
+
+/*PROFILE ANIMATIONS*/
+.animationload {
+    background-color: #fff;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.osahanloading {
+    animation: 1s linear 0s normal 3 running osahanloading;
+    background: #fed37f none repeat scroll 0 0;
+    border-radius: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+
+.osahanloading::after {
+    animation: 1s linear 0s normal 3 running osahanloading_after;
+    border-color: #85d6de transparent;
+    border-radius: 80px;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    height: 80px;
+    left: -15px;
+    position: absolute;
+    top: -15px;
+    width: 80px;
+}
+
+@keyframes osahanloading {
+0% {
+    transform: rotate(0deg);
+}
+50% {
+    background: #85d6de none repeat scroll 0 0;
+    transform: rotate(180deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+#th-feature{
+    font-family: 'Mina', sans-serif;
+}
+
+/* ----------------------------------------------- */

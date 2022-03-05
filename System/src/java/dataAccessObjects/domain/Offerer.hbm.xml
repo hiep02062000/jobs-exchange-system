@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class catalog="jobssystem" name="dataAccessObjects.domain.Offerer" optimistic-lock="version" table="offerer">
+    <id name="idOfferer" type="java.lang.Integer">
+      <column length="45" name="idOfferer"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="dataAccessObjects.domain.Login" fetch="join" name="login">
+      <column name="Login_idLogin" not-null="true"/>
+    </many-to-one>
+    <property name="name" type="string">
+      <column length="45" name="name"/>
+    </property>
+    <property name="lastName" type="string">
+      <column length="45" name="lastName"/>
+    </property>
+    <property name="originCountry" type="string">
+      <column length="45" name="originCountry"/>
+    </property>
+    <property name="phoneNumber" type="string">
+      <column length="45" name="phoneNumber"/>
+    </property>
+    <set fetch="join" inverse="true" lazy="false" name="offererfeatures" table="offererfeature">
+      <key>
+        <column name="Offerer_idOfferer" not-null="true"/>
+      </key>
+      <one-to-many class="dataAccessObjects.domain.OffererFeature"/>
+    </set>
+  </class>
+</hibernate-mapping>
